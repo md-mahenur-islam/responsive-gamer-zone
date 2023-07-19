@@ -1,0 +1,375 @@
+/* Google Font link  */
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Work+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+span{
+    color: #d00dc3git init;
+}
+
+/* Header Section Style */
+
+.header{
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.logo{
+    display: flex;
+    gap: 10px;
+}
+
+.nav-link .nav-item{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+.nav-link li{
+    list-style-type: none;
+}
+
+.nav-link li a{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+
+#follow-us{
+    background: #f4eeee;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+/* Header Responsive Style for Mobile Device  */
+
+@media screen and (max-width: 480px) {
+
+    .header{
+        margin-top: 30px;
+        text-align: center;
+        grid-template-columns: repeat(1,1fr);
+        box-shadow: none;
+    }
+
+    .logo{
+        margin: 0 auto;
+    }
+    .nav-link .nav-item{
+        flex-direction: column;
+    }
+    .nav-link .nav-item li:nth-child(3) {
+        margin-top: 20px;
+    }
+    
+  }
+
+  /* Header Responsive Style for Laptop Device  */
+
+  @media screen and (max-width: 900px) and (min-width: 540px) {
+
+    .header{
+        margin-top: 30px;
+        text-align: center;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .logo{
+        margin: 0 auto;
+    }
+    .nav-link .nav-item{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-link .nav-item li:nth-child(3) {
+        margin-top: 0px;
+    }
+    
+  }
+
+
+  /* Banner Section Style */
+  .banner-area{
+    padding: 0 10rem;
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    background-image: url("images/Group 14.png");
+    background-repeat: no-repeat;
+  }
+
+  .banner-text{
+    padding: 20px 10px;
+
+  }
+  #goat{
+    font-size: 4rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: linear-gradient(to top, #4c0357 ,#8512bf,#fb44d3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .banner-text li{
+    text-decoration: none;
+    list-style-type: none;
+    margin-top: 5px;
+  }
+
+  .button-area{
+    margin-top: 30px;
+  }
+  .btn{
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+
+  }
+
+  .btn-primary{
+    background: #f52a96;
+    color: white;
+    font-weight: bold;
+  }
+
+  .btn-secondary{
+    background: #2a8cf5;
+    color: white;
+    font-weight: bold;
+  }
+
+  .banner-image img{
+    width: 100%;
+  }
+
+    /* Banner Responsive Style for Mobile Device  */
+
+    @media screen and (max-width: 480px) {
+
+        .banner-area{
+            margin-top: 10rem;
+            grid-template-columns: 1fr;
+          }
+
+        .banner-text{
+            text-align: justify;
+            padding: 50px 10px;
+            order: 1;
+        }
+      }
+
+
+/* Online Games Section Style */
+
+.online-games{
+    margin: 30px auto;
+    padding: 50px;
+}
+
+.online-games-header{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.online-games-header h1{
+    margin-bottom: 5px;
+}
+
+#funny-videos{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: linear-gradient(to top, #d00dc3 ,#c97dee,#04879989);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.online-games-cards {
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+}
+.online-games-cards .card{
+    padding: 2rem;
+    width: 100%;
+}
+
+.online-games-cards .card img{
+    width: 100%;
+}
+
+.online-games-cards img:hover{
+    cursor: pointer;
+    border: 3px solid rgb(249, 15, 15);
+    border-radius: 5%;
+}
+
+#play-btn-card{
+    position: relative;
+}
+
+.play-button{
+    position: absolute;
+    font-size: 3rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+
+#play-btn-card:hover .play-button{
+    display: block;
+}
+
+/* Online Games Responsive Style for Mobile Device  */
+
+
+@media screen and (max-width: 480px) {
+
+    .online-games{
+        padding: 10px;
+    }
+    .online-games-header{
+        margin-bottom: 10px;
+    }
+    .online-games-header h1{
+        font-size: 1.5rem;
+    }
+    .online-games-header p{
+        font-size: 0.85rem;
+    }
+    .online-games-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+    }
+    .online-games-cards .card{
+        padding: 1rem;
+        width: 100%;
+    }
+   
+  }
+
+  /* Hero Banner Style  */
+
+  .hero-banner{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    padding: 30px 20px 20px 50px ;
+  }
+  .hero-text{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 80%;
+    text-align: right;
+    margin-left: 10rem;
+   
+  }
+
+  .hero-text span{
+    font-size: 2.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #d00dc3;
+  }
+  .hero-text p{
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .hero-image{
+    position: relative;
+    height: 600px;
+    margin: 0 10rem;
+  }
+
+  .hero-1{
+    height: 500px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .hero-2{
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  /* Games Area Style  */
+
+  .games-area{
+    padding: 10rem;
+  }
+  .games{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    justify-content: center;
+  }
+  .game{
+    padding: 5px 5px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 30px;
+  }
+
+  .game:hover{
+    border: 2px solid rgba(235, 16, 184, 0.679);
+    color: #d00dc3;
+  }
+
+  /* Footer style */
+  .footer{
+    padding: 80px;
+    background: #000;
+    color: white;
+    text-align: center;
+  }
+
+  .footer .logo{
+    margin: 0 auto;
+  }
+  .footer .about-us{
+    width: 60%;
+    margin: 2rem auto;
+  }
+  .footer .about-us .about-list{
+   display: flex;
+   justify-content: space-between;
+   text-decoration: none;
+   list-style-type: none;
+  }
+
+  .social-media{
+    width: 40%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+  }
+
+  .social-media i{
+    font-size: 2rem;
+  }
+
+  .policies{
+    font-size: small;
+    font-weight: normal;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: 3rem auto;
+  }
+  .policies a{
+    text-decoration: none;
+    color: gray;
+  }
