@@ -9,7 +9,7 @@
 }
 
 span{
-    color: #d00dc3git init;
+    color: #d00dc3;
 }
 
 /* Header Section Style */
@@ -271,7 +271,6 @@ span{
     width: 80%;
     text-align: right;
     margin-left: 10rem;
-   
   }
 
   .hero-text span{
@@ -304,6 +303,45 @@ span{
     left: 0;
   }
 
+  /* Hero Banner Responsive Style for Mobile */
+
+  @media screen and (max-width: 480px) {
+
+    .hero-banner{
+      grid-template-columns: 1fr;
+      padding: 1rem;
+     }
+
+     .hero-text{
+      width: 90%;
+      text-align: center;
+      margin-left: 0;
+      margin-bottom: 3rem;
+     }
+     .hero-image{
+      width: 50%;
+      position: relative;
+      height: 400px;
+
+    }
+  
+    .hero-1{
+      width: 150%;
+      height: 80%;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  
+    .hero-2{
+      height: 50%;
+      position: absolute;
+      bottom: 0;
+      left: -10rem;
+    }
+  }
+
+  
   /* Games Area Style  */
 
   .games-area{
@@ -324,9 +362,37 @@ span{
   }
 
   .game:hover{
-    border: 2px solid rgba(235, 16, 184, 0.679);
+    outline: 2px solid rgba(235, 16, 184, 0.679);
     color: #d00dc3;
   }
+
+  /* Games Area Responsive Style for Mobile */
+  @media screen and (max-width: 480px) {
+    .games-area{
+      margin: 5rem 0;
+      padding: 1rem;
+    }
+    .games{
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .game{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .game h5{
+      font-size: 0.85rem;
+    }
+    .game img{
+      width: 50%;
+      height: 50%;
+    }
+    .game:hover{
+      outline: none;
+    }  
+  }
+
+
 
   /* Footer style */
   .footer{
@@ -354,7 +420,7 @@ span{
     width: 40%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(6,1fr);
   }
 
   .social-media i{
@@ -372,4 +438,50 @@ span{
   .policies a{
     text-decoration: none;
     color: gray;
+  }
+
+  /* Footer Section Responsive Style for Mobile */
+  @media screen and (max-width: 480px) {
+    .footer .about-us{
+      width: 100%;
+      margin: 2rem auto;
+    }
+    .footer .about-us .about-list{
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     justify-content: space-around;
+     row-gap: 1rem;
+     justify-content: center;
+     align-items: center;
+     font-size: 0.8rem;
+    }
+  
+    .social-media{
+      width: 100%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      justify-content: space-between;
+    }
+  
+    .social-media i{
+      font-size: 1rem;
+    }
+  
+    .policies{
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      row-gap: 1rem;
+      margin: 3rem auto;
+    }
+    .policies a{
+      text-decoration: none;
+      color: gray;
+    }
+
+    .footer p{
+      font-size: 0.85rem;
+      color: #49464676;
+    }
   }
